@@ -39,14 +39,14 @@ namespace vutils {
 		}
 	}
 
-	const string & Properties::getProperty(const string key) const {
-		string &val = hash->find(Utils::calculateHash(key))->second;
+	const string & Properties::getProperty(const string *key) const {
+		string &val = hash->find(Utils::calculateHash(*key))->second;
 		return val;
 	}
 
 	const string & Properties::getProperty(const char * key) const {
 		string val(key);
-		return getProperty(val);
+		return getProperty(&val);
 	}
 
 	void Properties::readFile() {

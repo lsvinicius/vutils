@@ -13,7 +13,7 @@ namespace vutils {
 			Properties(const std::string &fileName);
 			Properties(const char * fileName);
 			virtual ~Properties();
-			const std::string & getProperty(const std::string key) const;
+			const std::string & getProperty(const std::string *key) const;
 			const std::string & getProperty(const char * key) const;
 		protected:
 			virtual void readFile();

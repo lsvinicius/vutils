@@ -12,5 +12,6 @@ int main() {
 	Properties p(x);
 	Properties p2("ola");
 	std::string z("aki");
+	cout<<p.getProperty(&x)<<endl;
 	cout<<p.getProperty("ola")<<endl;
 }
